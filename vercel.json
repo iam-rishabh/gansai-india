@@ -1,5 +1,5 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "rewrites": [{ "source": "/(.*)", "destination": "/routes/index.tsx" }],
   "buildCommand": "bun run build",
   "outputDirectory": "dist",
   "devCommand": "bun run dev",
