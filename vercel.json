@@ -1,6 +1,6 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": ".output",
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": ".output/public",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
   "framework": null,
@@ -10,12 +10,6 @@
       "destination": "/"
     }
   ],
-  "functions": {
-    ".output/server/index.mjs": {
-      "runtime": "nodejs20.x",
-      "maxDuration": 10
-    }
-  },
   "headers": [
     {
       "source": "/assets/(.*)",
