@@ -1,0 +1,10 @@
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "buildCommand": "bun run build",
+  "outputDirectory": "dist",
+  "devCommand": "bun run dev",
+  "installCommand": "bun install",
+  "env": {
+    "VITE_GOOGLE_SCRIPT_URL": "https://script.google.com/macros/s/AKfycbw_SxMSSwAcufbj_WL7Gj7hOSquLW2F-4_LLSbubr3G9li9myTH7eyy7jX9VnhRnEp2yw/exec"
+  }
+}
