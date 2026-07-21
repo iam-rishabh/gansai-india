@@ -13,6 +13,23 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
+const SITE_URL = "https://gansaindia.com";
+
+const jsonLdData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Gansai India",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.png`,
+  description: "Large-scale candle manufacturer in Gujarat, India.",
+  address: {
+    "@type": "PostalAddress",
+    addressRegion: "Gujarat",
+    addressCountry: "IN",
+  },
+  sameAs: ["https://www.instagram.com/gansaicandlesindia"],
+};
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -78,7 +95,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { rel: "icon", href: faviconUrl, type: "image/x-icon" },
       { title: "Gansai India — Premium Candle Manufacturer in Gujarat" },
       {
         name: "description",
@@ -93,34 +109,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Premium candles, waxes, wicks, fragrances & DIY kits from India's rising manufacturer. 500 T/mo capacity.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://gansai.in" },
-      { property: "og:image", content: "https://gansai.in/og.jpg" },
+      { property: "og:url", content: SITE_URL },
+      { property: "og:image", content: `${SITE_URL}/og.jpg` },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "robots", content: "index, follow" },
       {
-        name: "keywords",                                             
-        content: "candle colors india, candle color manufacturing india, candle color manufacturers india, candle manufacturer India, wholesale candles Gujarat, wholesale candles india, candle manufacturers india, best candle manufacturers india, cheap candle manufacturers india, best candle manufacturers india 2026, bulk candles, wax supplier India, DIY candle kits, Gansai India",
-      },
-      {
-        "script:ld+json": JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Gansai India",
-          url: "https://gansaindia.com",
-          logo: "https://gansaindia.com/logo.png",
-          description: "Large-scale candle manufacturer in Gujarat, India.",
-          address: {
-            "@type": "PostalAddress",
-            addressRegion: "Gujarat",
-            addressCountry: "IN",
-          },
-          sameAs: [
-            "https://www.instagram.com/gansaicandlesindia",
-          ],
-        }),
+        name: "keywords",
+        content:
+          "candle colors india, candle color manufacturing india, candle color manufacturers india, candle manufacturer India, wholesale candles Gujarat, wholesale candles india, candle manufacturers india, best candle manufacturers india, cheap candle manufacturers india, best candle manufacturers india 2026, bulk candles, wax supplier India, DIY candle kits, Gansai India",
       },
     ],
     links: [
+      { rel: "icon", href: faviconUrl, type: "image/png" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
@@ -128,36 +128,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap",
       },
-      { rel: "canonical", href: "https://gansaindia.com" },
+      { rel: "canonical", href: SITE_URL },
     ],
   }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
 
-function RootShell({ children }: { children: ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
-
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
-    <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
-    </QueryClientProvider>
+    <html lang="en">
+      <head>
+        <HeadContent />
+        {/* Render JSON-LD inside head cleanly for Googlebot */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
+        />
+      </head>
+      <body>
+        <QueryClientProvider client={queryClient}>
+          <Outlet />
+        </QueryClientProvider>
+        <Scripts />
+      </body>
+    </html>
   );
 }
