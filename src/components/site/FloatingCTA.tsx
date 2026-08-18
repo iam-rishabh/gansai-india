@@ -12,7 +12,7 @@ export function FloatingCTA() {
 
   return (
     <a
-      href="#contact"
+      href="https://wa.me/9677464967"
       aria-label="Get a quote"
       className={`fixed bottom-6 right-6 z-40 inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground pl-4 pr-5 py-3 text-sm font-medium shadow-2xl shadow-primary/40 transition-all duration-500 ${
         show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6 pointer-events-none"
