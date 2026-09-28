@@ -40,7 +40,7 @@ export function Hero() {
 
           <p className="mt-6 text-lg text-foreground/75 max-w-xl text-balance">
             Premium candles and complete candle-making supplies from cumulative
-            State of the Art manufacturing facilities producing 500 tonnes per month for partners
+            State of the Art manufacturing facilities producing 30 tonnes per month for partners
             across India.
           </p>
 

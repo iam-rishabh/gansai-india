@@ -99,14 +99,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Gansai India: large-scale candle manufacturer in Gujarat. 500 tonnes/month capacity, 50,000+ sq ft facility. Wholesale candles, raw materials, and DIY kits.",
+          "Gansai India: large-scale candle manufacturer in Gujarat. 30 tonnes/month capacity, 10,000+ sq ft facility. Wholesale candles, raw materials, and DIY kits.",
       },
       { name: "author", content: "Gansai India" },
       { property: "og:title", content: "Gansai India — Premium Candle Manufacturer" },
       {
         property: "og:description",
         content:
-          "Premium candles, waxes, wicks, fragrances & DIY kits from India's rising manufacturer. 500 T/mo capacity.",
+          "Premium candles, waxes, wicks, fragrances & DIY kits from India's rising manufacturer. 30 T/mo capacity.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },

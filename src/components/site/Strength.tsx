@@ -5,9 +5,9 @@ import { Gauge, Layers, ShieldCheck, Truck } from "lucide-react";
 
 const stats = [
   { value: 100000, suffix: "+", label: "items shipped", icon: Truck },
-  { value: 50000, suffix: "+", label: "Sq ft facility", icon: Layers },
+  { value: 10000, suffix: "+", label: "Sq ft facility", icon: Layers },
   { value: 100, suffix: "%", label: "QC tested batches", icon: ShieldCheck },
-  { value: 500, suffix: "+", label: "Tonnes / month", icon: Gauge }
+  { value: 30, suffix: "+", label: "Tonnes / month", icon: Gauge }
   ,
 ];
 

@@ -3,7 +3,7 @@ import { Award, Boxes, Leaf, Sparkles, Truck, Wallet, Workflow, Globe2 } from "l
 
 const items = [
   { icon: Award, t: "Consistent Quality", d: "Every batch QC-tested for burn time, scent throw and finish." },
-  { icon: Boxes, t: "Massive Scale", d: "500 tonnes monthly with reliable lead times you can plan around." },
+  { icon: Boxes, t: "Massive Scale", d: "30 tonnes monthly with reliable lead times you can plan around." },
   { icon: Wallet, t: "Competitive Pricing", d: "Direct-from-factory pricing for wholesalers and exporters." },
   { icon: Workflow, t: "Custom Formulations", d: "Private-label, fragrance blends and bespoke molds." },
   { icon: Leaf, t: "Eco-conscious Options", d: "Soy, beeswax and recyclable packaging programs." },

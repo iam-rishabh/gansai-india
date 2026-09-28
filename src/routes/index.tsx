@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Large-scale candle manufacturer in Gujarat, India. 500 T/month capacity across a 50,000+ sq ft facility. Premium candles, raw materials, fragrances & DIY kits.",
+          "Large-scale candle manufacturer in Gujarat, India. 30 T/month capacity across a 10,000+ sq ft facility. Premium candles, raw materials, fragrances & DIY kits.",
       },
       { property: "og:title", content: "Gansai India — Premium Candle Manufacturer" },
       {
