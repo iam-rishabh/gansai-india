@@ -60,7 +60,7 @@ export function Hero() {
           </div>
 
           <div className="mt-12 flex flex-wrap gap-x-8 gap-y-4 text-sm text-foreground/70">
-            <Badge icon={<Factory className="h-4 w-4" />} text="500 T / month capacity" />
+            <Badge icon={<Factory className="h-4 w-4" />} text="30 T / month capacity" />
             <Badge icon={<MapPin className="h-4 w-4" />} text="Made in Gujarat, India" />
             <Badge icon={<ShieldCheck className="h-4 w-4" />} text="ISO-grade quality" />
           </div>
