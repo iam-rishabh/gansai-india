@@ -44,38 +44,38 @@
 :root {
   --radius: 0.75rem;
 
-  /* Brand palette — warm peach orange, beige, cream, charcoal */
-  --background: oklch(0.985 0.012 75);          /* warm off-white */
-  --foreground: oklch(0.22 0.02 50);            /* deep charcoal */
+  /* Luxury Noir Palette - High Contrast Deep Onyx */
+  --background: oklch(0.1 0 0);          /* Deep Onyx #050505-ish */
+  --foreground: oklch(0.98 0 0);            /* Near White */
 
   --cream: oklch(0.97 0.018 75);
   --beige: oklch(0.93 0.028 75);
-  --ember: oklch(0.78 0.13 55);                 /* warm peach glow */
-  --charcoal: oklch(0.22 0.02 50);
+  --ember: oklch(0.78 0.13 55);                 /* Keep for specific accent */
+  --charcoal: oklch(0.2 0 0);
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.02 50);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.02 50);
+  --card: oklch(0.12 0 0);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.1 0 0);
+  --popover-foreground: oklch(0.98 0 0);
 
-  --primary: oklch(0.74 0.16 50);               /* #FF9F4D-ish */
-  --primary-foreground: oklch(0.99 0.005 75);
+  --primary: oklch(0.85 0.05 100);               /* Silver-Gold accent */
+  --primary-foreground: oklch(0.1 0 0);
 
-  --secondary: oklch(0.93 0.028 75);            /* soft beige */
-  --secondary-foreground: oklch(0.25 0.02 50);
+  --secondary: oklch(0.25 0 0);            /* Dark gray / silver-dark */
+  --secondary-foreground: oklch(0.98 0 0);
 
-  --muted: oklch(0.95 0.02 75);
-  --muted-foreground: oklch(0.45 0.02 60);
+  --muted: oklch(0.2 0 0);
+  --muted-foreground: oklch(0.6 0 0);
 
-  --accent: oklch(0.88 0.06 60);
-  --accent-foreground: oklch(0.22 0.02 50);
+  --accent: oklch(0.74 0.16 50);
+  --accent-foreground: oklch(0.98 0 0);
 
   --destructive: oklch(0.6 0.22 27);
   --destructive-foreground: oklch(0.99 0 0);
 
-  --border: oklch(0.9 0.018 75);
-  --input: oklch(0.9 0.018 75);
-  --ring: oklch(0.74 0.16 50);
+  --border: oklch(0.25 0 0);
+  --input: oklch(0.25 0 0);
+  --ring: oklch(0.85 0.05 100);
 }
 
 @layer base {

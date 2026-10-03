@@ -14,32 +14,47 @@ const items = [
 
 export function Why() {
   return (
-    <section id="why" className="py-28 bg-secondary/40">
+    <section id="why" className="py-32 bg-background">
       <div className="container-page">
-        <div className="max-w-2xl">
-          <p className="text-xs uppercase tracking-[0.25em] text-primary">Why Gansai India</p>
-          <h2 className="mt-4 text-4xl sm:text-5xl text-balance">
-            The reliability of scale, the soul of a craft house.
-          </h2>
-        </div>
+        <div className="grid lg:grid-cols-12 gap-16 items-start">
+          <div className="lg:col-span-5 sticky top-32">
+            <p className="text-[10px] uppercase tracking-[0.4em] text-primary font-medium mb-6">
+              The Gansai Edge
+            </p>
+            <h2 className="text-5xl sm:text-7xl leading-[0.9] tracking-tighter text-white font-display">
+              Reliability of <br />
+              <span className="text-primary italic font-light">scale</span>, <br />
+              soul of a craft house.
+            </h2>
+            <p className="mt-8 text-lg text-white/60 leading-relaxed max-w-md font-light">
+              We bridge the gap between artisanal precision and industrial capacity,
+              ensuring that every tonne produced carries the same soul as a single handmade candle.
+            </p>
+          </div>
 
-        <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border rounded-3xl overflow-hidden">
-          {items.map((b, i) => (
-            <motion.div
-              key={b.t}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: (i % 4) * 0.06 }}
-              className="bg-background p-7 hover:bg-card transition-colors group"
-            >
-              <span className="inline-grid place-items-center h-11 w-11 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition">
-                <b.icon className="h-5 w-5" />
-              </span>
-              <h3 className="mt-5 text-lg font-medium font-sans tracking-tight">{b.t}</h3>
-              <p className="mt-2 text-sm text-foreground/65 leading-relaxed">{b.d}</p>
-            </motion.div>
-          ))}
+          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+            {items.map((b, i) => (
+              <motion.div
+                key={b.t}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: (i % 2) * 0.1 }}
+                className="group relative p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-500 overflow-hidden"
+              >
+                {/* Background Decoration */}
+                <div className="absolute -right-4 -bottom-4 h-24 w-24 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors" />
+
+                <div className="relative z-10">
+                  <span className="inline-grid place-items-center h-10 w-10 rounded-lg bg-white/10 text-white group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500">
+                    <b.icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="mt-6 text-xl font-medium text-white group-hover:text-primary transition-colors duration-500">{b.t}</h3>
+                  <p className="mt-3 text-sm text-white/50 leading-relaxed font-light">{b.d}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
