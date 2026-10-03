@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logoD.png";
 
 const links = [
   { href: "#home", label: "Home" },
@@ -36,7 +36,7 @@ export function Header() {
             alt="Gansai India"
             width={48}
             height={48}
-            className="h-10 w-10 object-contain filter dark:invert"
+            className="h-10 w-10 object-contain"
           />
           <span className="font-brand text-3xl leading-none tracking-wide text-foreground">
             GANSAI INDIA

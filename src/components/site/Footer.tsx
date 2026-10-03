@@ -25,7 +25,7 @@ export function Footer() {
                     height={64}
                     className="h-12 w-12 md:h-16 md:w-16 object-contain filter invert"
                   />
-                  <span className="font-brand text-4xl md:text-6xl lg:text-7xl leading-none tracking-tighter text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
+                  <span className="font-brand text-4xl md:text-6xl lg:text-7xl leading-none tracking-tighter text-black">
                     GANSAI INDIA
                   </span>
                 </div>
