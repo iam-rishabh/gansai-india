@@ -36,7 +36,7 @@ export function Header() {
             alt="Gansai India"
             width={48}
             height={48}
-            className="h-10 w-10 object-contain"
+            className="h-10 w-10 object-contain filter dark:invert"
           />
           <span className="font-brand text-3xl leading-none tracking-wide text-foreground">
             GANSAI INDIA

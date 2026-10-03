@@ -23,7 +23,7 @@ export function Footer() {
                     alt="Gansai India"
                     width={64}
                     height={64}
-                    className="h-12 w-12 md:h-16 md:w-16 object-contain"
+                    className="h-12 w-12 md:h-16 md:w-16 object-contain filter invert"
                   />
                   <span className="font-brand text-4xl md:text-6xl lg:text-7xl leading-none tracking-tighter text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
                     GANSAI INDIA
@@ -88,18 +88,6 @@ export function Footer() {
           </div>
         </div>
       </footer>
-
-      {/* Final section after footer – side‑by‑side logo and branding, filling half the viewport, black background */}
-      <section className="w-full h-[50vh] flex bg-black text-white">
-        <div className="flex-1 flex items-center justify-center">
-          <img src={logo} alt="Gansai logo" className="h-3/4 object-contain" />
-        </div>
-        <div className="flex-1 flex items-center justify-center">
-          <span className="font-brand text-4xl md:text-6xl lg:text-7xl leading-none tracking-tighter">
-            GANSAI INDIA
-          </span>
-        </div>
-      </section>
     </>
   );
 }

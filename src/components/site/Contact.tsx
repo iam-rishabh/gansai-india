@@ -15,14 +15,15 @@ export function Contact() {
   const [error, setError] = useState("");
 
   // Form fields state
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     inquiryType: inquiryTypes[0],
     name: "",
     company: "",
     email: "",
     phone: "",
     message: "",
-  });
+  };
+  const [formData, setFormData] = useState(initialFormData);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -50,6 +51,8 @@ export function Contact() {
       });
       // With no-cors we can't read response, but it still sends
       setSubmitted(true);
+      // Reset form fields after successful submit
+      setFormData(initialFormData);
     } catch (err) {
       console.error(err);
       setError("Something went wrong. Please try again or email us directly.");
@@ -115,7 +118,7 @@ export function Contact() {
             Inquiry type
           </label>
           <div className="flex flex-wrap gap-2">
-            {inquiryTypes.map((t, i) => (
+            {inquiryTypes.map((t) => (
               <label key={t} className="cursor-pointer">
                 <input
                   type="radio"
@@ -159,7 +162,7 @@ export function Contact() {
             disabled={loading}
             className="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground py-3.5 text-sm font-medium shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-0.5 transition-all disabled:opacity-50"
           >
-            {loading ? "Sending..." : submitted ? "Thank you — we'll be in touch" : "Send inquiry"}
+            {loading ? "Sending..." : submitted ? "Request sent!" : "Send inquiry"}
             {!submitted && !loading && <ArrowRight className="h-4 w-4" />}
           </button>
           {error && <p className="mt-3 text-xs text-red-500 text-center">{error}</p>}
@@ -172,7 +175,6 @@ export function Contact() {
   );
 }
 
-// ... (Detail and Field components remain the same, but Field now accepts value/onChange)
 function Field({ label, name, type = "text", required, value, onChange }) {
   return (
     <label className="block">
