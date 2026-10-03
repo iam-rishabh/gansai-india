@@ -111,7 +111,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:url", content: SITE_URL },
       { property: "og:image", content: `${SITE_URL}/og.jpg` },
+      { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Gansai India — Premium Candle Manufacturer" },
+      { name: "twitter:description", content: "Large-scale candle manufacturer in Gujarat, India. 30 tonnes/month capacity, premium candles, raw materials, DIY kits." },
+      { name: "twitter:image", content: `${SITE_URL}/og.jpg` },
       { name: "robots", content: "index, follow" },
       {
         name: "keywords",
@@ -147,6 +151,19 @@ function RootComponent() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            url: SITE_URL,
+            potentialAction: {
+              "@type": "SearchAction",
+              target: `${SITE_URL}/search?q={search_term_string}`,
+              "query-input": "required name=search_term_string",
+            },
+          }) }}
         />
       </head>
       <body>
