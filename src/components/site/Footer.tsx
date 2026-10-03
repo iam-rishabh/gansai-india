@@ -89,12 +89,16 @@ export function Footer() {
         </div>
       </footer>
 
-      {/* Final section after footer – modern logo block covering half the viewport */}
-      <section className="relative w-full h-[50vh] flex flex-col items-center justify-center bg-foreground text-background/80">
-        <img src={logo} alt="Gansai logo" className="h-3/4 object-contain" />
-        <span className="font-brand text-4xl md:text-6xl lg:text-7xl leading-none tracking-tighter text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70 mt-4">
-          GANSAI INDIA
-        </span>
+      {/* Final section after footer – side‑by‑side logo and branding, filling half the viewport, black background */}
+      <section className="w-full h-[50vh] flex bg-black text-white">
+        <div className="flex-1 flex items-center justify-center">
+          <img src={logo} alt="Gansai logo" className="h-3/4 object-contain" />
+        </div>
+        <div className="flex-1 flex items-center justify-center">
+          <span className="font-brand text-4xl md:text-6xl lg:text-7xl leading-none tracking-tighter">
+            GANSAI INDIA
+          </span>
+        </div>
       </section>
     </>
   );
