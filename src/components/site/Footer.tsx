@@ -75,7 +75,7 @@ export function Footer() {
               <ul className="mt-4 space-y-2.5 text-sm">
                 <li>Plot 280, Ward 10/A, Gurukul Area, Gandhidham Gujarat (370201)</li>
                 <li>GSTIN: 24AOPPD6842Q1ZB</li>
-                <li><a href="mailto:gansai.india@gmail.com" className="hover:text-primary">gansai.india@gmail.com</a></li>
+                <li><a href="mailto:business@gansaindia.com" className="hover:text-primary">business@gansaindia.com</a></li>
                 <li><a href="tel:+91 9677464967" className="hover:text-primary">+91 9677464967</a></li>
               </ul>
             </div>
